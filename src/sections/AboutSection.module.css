@@ -1,0 +1,7 @@
+.wrap{padding:0;}
+.grid{display:grid;grid-template-columns:0.95fr 1.05fr;gap:26px;align-items:start;}
+.block{padding:18px;border-radius:18px;border:1px solid rgba(15,23,42,0.08); background:#fff;}
+.h3{margin:0 0 10px;font-size:16px;}
+.p{margin:0;color:rgba(15,23,42,0.68);line-height:1.7;font-size:14px;}
+@media (max-width: 900px){.grid{grid-template-columns:1fr;}}
+
