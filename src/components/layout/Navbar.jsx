@@ -44,14 +44,12 @@ export default function Navbar() {
 
         <button
           type="button"
-          className={`${styles.menuButton} ${menuOpen ? styles.openButton : ''}`}
+          className={`${styles.menuText} ${menuOpen ? styles.openButton : ''}`}
           aria-expanded={menuOpen}
           aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
           onClick={toggleMenu}
         >
-          <span className={styles.menuBar} />
-          <span className={styles.menuBar} />
-          <span className={styles.menuBar} />
+          Menu
         </button>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`} aria-label="Primary">

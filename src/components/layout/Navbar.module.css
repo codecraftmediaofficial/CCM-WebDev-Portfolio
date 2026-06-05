@@ -28,11 +28,15 @@
   height:auto;
   display:block;
 }
-.brandText{font-size:15px;}
+.brandText{
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:0.01em;
+}
 .menuButton{
   display:none;
-  background:transparent;
-  border:none;
+  background:lightgray;
+  border:2px solid blue;
   padding:10px;
   cursor:pointer;
   align-items:center;
@@ -41,10 +45,10 @@
   width:44px;
   height:44px;
   border-radius:14px;
-  transition: background 180ms ease, transform 180ms ease;
+  transition: transform 180ms ease;
 }
 .menuButton:hover{
-  background:rgba(79,70,229,0.08);
+  background:rgba(15,23,42,0.06);
 }
 .menuButton:focus-visible{
   outline:3px solid rgba(79,70,229,0.25);
@@ -52,12 +56,22 @@
 }
 .menuBar{
   display:block;
-  width:22px;
-  height:3px;
+  width:26px;
+  height:4px;
   background:#0f172a;
   border-radius:999px;
   margin:4px 0;
-  transition: transform 180ms ease, opacity 180ms ease, background 180ms ease;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+.menuText{
+  display:none;
+  background:transparent;
+  border:none;
+  color:#0f172a;
+  font-weight:700;
+  font-size:15px;
+  padding:8px 10px;
+  cursor:pointer;
 }
 .openButton .menuBar:nth-child(1){
   transform: translateY(7px) rotate(45deg);
@@ -124,6 +138,15 @@
     display:flex;
   }
 
+  .menuText{
+    display:block;
+  }
+
+  /* ensure old span-based bars are hidden if present */
+  .menuButton .menuBar{
+    display:none;
+  }
+
   .nav{
     position:fixed;
     top:0;
@@ -151,7 +174,5 @@
     font-size:15px;
     border-radius:16px;
   }
-
-  .brandText{display:none;}
 }
 
